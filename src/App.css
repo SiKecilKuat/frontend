@@ -66,3 +66,32 @@
   font-size: 18px;
   padding: 15px 25px;
 }
+
+.circle{
+  display: inline-block;
+  border-radius: 50%;
+  padding:5px;
+  background-color: white;
+  position: relative;
+}
+
+.btn-add-photo{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #EBE76C;
+  width: 33px;
+  height: 33px;
+  font-size: 23px;
+  color: black;
+  border: 0;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.photo{
+  border-radius: 50%;
+}
+.photo-file{
+  display: none;
+}
