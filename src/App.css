@@ -1,7 +1,7 @@
 .App {
   background-color: #836096;
   text-align: center;
-  min-height: 100vh;
+  height: 100vh;
   width: 450px;
   margin: 0 auto;
 }
@@ -60,7 +60,7 @@
   box-sizing: border-box;
   width: 85%;
   height: 59px;
-  margin: 0 auto;
+  margin: 20px auto;
   border-radius: 26px;
   border: 0;
   font-size: 18px;
@@ -94,4 +94,16 @@
 }
 .photo-file{
   display: none;
+}
+
+.main{
+  width: 85%;
+  height: 59px;
+  background-color: #ED7B7B;
+  border-radius: 26px;
+  border: 0;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  margin: 10px auto;
 }
