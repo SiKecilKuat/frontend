@@ -1,11 +1,11 @@
-import dummy from '../assets/dummy.png'
+// import dummy from '../assets/dummy.png'
 
 export default function PhotoPicker(){
     return (
         <div>
 
             <div className="circle">
-                <img className="photo" id="photo-pre-img" src={dummy} alt="dummy photo" width="158px" height="152px"/>
+                <img className="photo" id="photo-pre-img" src="/assets/dummy.png" alt="dummy photo" width="158px" height="152px"/>
 
                 
                 <label htmlFor="photo">

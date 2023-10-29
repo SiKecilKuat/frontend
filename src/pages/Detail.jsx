@@ -6,6 +6,7 @@ import { Data } from "../utils/Data";
 
 import PhotoPicker from "../components/PhotoPicker"
 import PieChart from "../components/PieChart"
+import Button from "../components/Button"
 import GraphChart from "../components/GraphChart"
 
 Chart.register(CategoryScale);
@@ -44,6 +45,7 @@ export default function Home(){
             <PieChart chartData={chartData} />
             <GraphChart chartData={chartData} />
 
+            <Button  placeholder={"Log Harian"} mode="main"/>
         </div>
     )
 }
