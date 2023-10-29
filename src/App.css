@@ -3,6 +3,7 @@
   background-color: #836096;
   text-align: center;
   height: 100vh;
+  position: relative;
   width: 500px;
   overflow: auto;
   font-family: 'Poppins', sans-serif;
@@ -136,11 +137,49 @@
 
 .card{
   width: 328px;
-  height: 94px;
   background-color: #ED7B7B;
   display: flex;
-  padding: 20px;
+  align-items: center;
+  color: white;
+  border-radius: 47px;
+  margin: 32px auto;
+  padding: 10px;
+  box-sizing: border-box;
 }
 .title-card{
+  margin: 0;
+  margin-bottom: 10px;
+}
 
+.card-body{
+  text-align: left;
+  margin-left: 28px;
+}
+
+.floatingActionButton{
+  width: 60px;
+  height: 60px;
+  border-radius: 37px;
+  font-size: 43px;
+  background-color: #EBE76C;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 30px;
+}
+
+.floatingActionButton:hover{
+  cursor: pointer;
+}
+.subtitle-card{
+  margin: 0;
+}
+.img-card{
+  margin: 0;
+  width: 83px;
+  height: 80px;
+}
+
+.center{
+  
 }

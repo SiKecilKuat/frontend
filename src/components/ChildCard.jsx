@@ -4,10 +4,10 @@ export default function ChildCard({photo="dummy.png",mode,name,date}){
         <div>
             <div className="card " >
                 <div>
-                    <img src={photoWithUrl}  alt="child" /> 
+                    <img src={photoWithUrl} className="img-card" alt="child" /> 
                 </div>
  
-                <div>
+                <div className="card-body">
                     <h3 className="title-card">
                         {name}
                     </h3>
