@@ -100,6 +100,10 @@
   display: none;
 }
 
+.back:hover{
+  cursor: pointer;
+  
+}
 .main{
   width: 85%;
   height: 59px;
@@ -182,4 +186,86 @@
 
 .center{
   
+}
+
+.option-fab{
+
+}
+
+.subheader-log{
+  display: flex;
+  margin: 0 35px;
+  align-items: center;
+  gap: 20px;
+  color: white;
+}
+
+.subheader-title{
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0; 
+  margin-bottom: 10px;
+}
+
+.subheader-content{
+  margin-left: 10px;
+}
+
+.subheader-subtitle{
+  margin: 0;
+  font-size: 16px;
+
+}
+
+.card-log{
+  width: 80%;
+  color: white;
+  text-align: left;
+  margin: 40px auto;
+  border-left: 2px solid white;
+}
+
+.header-log{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.btn-arrow-log{
+  background-color: transparent;
+  border: 0;
+  transition:all 0.5s ease-out;
+
+}
+
+.btn-arrow-log:hover{
+  cursor: pointer;
+}
+
+.card-dailylog{
+  margin: 20px  ;
+  display: flex;
+  align-items: center;
+  background-color: #ED7B7B;
+  border-radius: 22px;
+  padding: 0 20px;
+  gap: 10px;
+  box-sizing: border-box;
+ 
+}
+
+
+.body-log{
+   transition:all 0.5s ease-out; 
+}
+
+.sleep{
+  background-color: #F0B86E !important;
+}
+.deactivate{
+  display: none;
+}
+
+.up{
+    transform:rotate(180deg);
+    -webkit-transform:rotate(180deg); /* Safari and Chrome */
 }

@@ -8,13 +8,13 @@ export default function Home(){
     let navigate = useNavigate()
 
     function handleClick() {
-        console.log("clicked");
-        navigate("/log",{replace: true});
+        navigate("/log");
     }
 
     return (
         <div>
             <NavTop title="Login"/>
+            <img src="./assets/illustration.png" alt="illustration" width="400px" />
             <Input name="name" placeholder="Masukan Email Anda"/>
             <Input name="password" placeholder="Masukan Passowrd Anda" type="password"/>
             <Button  placeholder={"Login"} mode="main" click={handleClick}/>
