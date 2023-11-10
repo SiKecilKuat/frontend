@@ -15,8 +15,8 @@ function App() {
       <Router>
         <Routes>
           <Route path='/'element={<Home/>}></Route>
-          <Route path='/create'element={<Create/>}></Route>
-          <Route path='/detail'element={<Detail/>}></Route>
+          <Route path='/children/create'element={<Create/>}></Route>
+          <Route path='children/detail/:id'element={<Detail/>}></Route>
           <Route path='/log'element={<Log/>}></Route>
           <Route path='/register'element={<Register/>}></Route>
           <Route path='/children'element={<Children/>}></Route>

@@ -1,10 +1,9 @@
-export default function ChildCard({photo="dummy.png",mode,name,date}){
-    let photoWithUrl = `/assets/${photo}`
+export default function ChildCard({onClick,photo="dummy.png",mode,name,date}){
     return(
         <div>
-            <div className="card " >
+            <div className="card " onClick={onClick} >
                 <div>
-                    <img src={photoWithUrl} className="img-card" alt="child" /> 
+                    <img src={photo} className="img-card" alt="child" /> 
                 </div>
  
                 <div className="card-body">

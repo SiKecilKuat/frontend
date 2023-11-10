@@ -8,11 +8,13 @@ import PhotoPicker from "../components/PhotoPicker"
 import PieChart from "../components/PieChart"
 import Button from "../components/Button"
 import GraphChart from "../components/GraphChart"
+import { useParams } from "react-router-dom";
 
 Chart.register(CategoryScale);
 
 
 export default function Home(){
+   const { id } = useParams();
     const [chartData, setChartData] = useState({
         labels: Data.map((data) => data.title), 
         datasets: [
