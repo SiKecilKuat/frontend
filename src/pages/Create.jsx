@@ -45,7 +45,7 @@ export default function Create(){
         }
 
         const responseData = await response.json(); 
-        navigate(-1)
+        navigate("/children")
 
 
     }
