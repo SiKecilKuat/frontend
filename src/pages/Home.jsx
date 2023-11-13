@@ -18,6 +18,7 @@ export default function Home(){
             <Input name="name" placeholder="Masukan Email Anda"/>
             <Input name="password" placeholder="Masukan Passowrd Anda" type="password"/>
             <Button  placeholder={"Login"} mode="main" click={handleClick}/>
+            <Button  placeholder={"Register"} mode="main" click={()=> {navigate("/register")}}/>
         </div>
     )
 }

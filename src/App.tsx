@@ -17,7 +17,7 @@ function App() {
           <Route path='/'element={<Home/>}></Route>
           <Route path='/children/create'element={<Create/>}></Route>
           <Route path='children/detail/:id'element={<Detail/>}></Route>
-          <Route path='/log'element={<Log/>}></Route>
+          <Route path='/log/:id'element={<Log/>}></Route>
           <Route path='/register'element={<Register/>}></Route>
           <Route path='/children'element={<Children/>}></Route>
           <Route path='*'element={<NotFound/>}></Route>

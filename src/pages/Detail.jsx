@@ -48,6 +48,9 @@ export default function Home(){
         return ageString;
         }
 
+        function toLog() {
+          navigate("/log/"+id)
+        }
     async function getChild() {
     const response = await fetch("http://localhost:3000/child-data/"+id)
 
@@ -67,9 +70,7 @@ export default function Home(){
     }
 
    
-    function submit() {
-      navigate("/log")
-    }
+
 
     const [chartData, setChartData] = useState({
         labels: Data.map((data) => data.title), 
@@ -109,7 +110,7 @@ export default function Home(){
             <PieChart chartData={chartData} />
             <GraphChart chartData={chartData} />
 
-            <Button click={submit}  placeholder="Log Harian" mode="main"/>
+            <Button placeholder="Log Harian" mode="main" click={() => toLog()}/>
         </div>
     )
 }
