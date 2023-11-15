@@ -21,6 +21,8 @@ export default function Log(){
     let [logs,setLogs] = useState([])
     let [date,setDate] = useState(new Date())
     let [array,setArray] = useState([])
+    const [rerender, setRerender] = useState(false);
+
     const popupCloseHandler = (e) => {
         setVisibilityEat(e);
         setVisibilitySleep(e);
@@ -74,7 +76,7 @@ export default function Log(){
         try {
         const response = await fetch("http://localhost:3000/child-data/"+id+"/food-intake-logs")
             if(!response.ok){
-                alert("error")
+                // alert("error")
                 return
             }
 
@@ -88,7 +90,7 @@ export default function Log(){
         }
 
         } catch(error){
-            alert("error: " + error.message)
+            // alert("error: " + error.message)
         }
 
         
@@ -120,10 +122,52 @@ export default function Log(){
         popupCloseHandler()
     }
 
+    async function addSleepLog(){
+        const response = await fetch("http://localhost:3000/child-data/"+id+"/food-intake-logs",{
+            method:"post",
+            headers:{
+                "Content-Type":"application/json"
+            },
+            body : JSON.stringify({
+                "mealType": mealType,
+                "foodItem": foodItem,
+                "calories": Number(calories)
+            })
+        })
+        
+        if (!response.ok){
+            alert("kesalahan server")
+            return
+        }
+        
+        getLogs()
+        setMealType("")
+        setFoodItem("")
+        setCalories("")
+        popupCloseHandler()
+    }
+
+    
+
+       
+
 
     useEffect(() => {
+         fetch("http://localhost:3000/child-data/"+id)
+        .then(response => response.json())
+        .then(result => {
+
+            let {data}  = result 
+            
+            setName(data.name)
+            setDateOfBirth(data.birth_date)
+            setGender(data.gender)
+            
+            setRerender(!rerender)
+        })
+        .catch(error => console.error("Error fetching food intake logs:", error));
+
         getLogs()
-        getChild()
     },[])
 
     return (
@@ -140,9 +184,9 @@ export default function Log(){
             </div>
             
             {
-                array.map((value,index) => {
+                logs.map((value,index) => {
 
-                    return  <CardLog date={value} logs={logs}/>
+                    return  <CardLog date={value.dtcreated} logs={logs}/>
                 })
             }
 

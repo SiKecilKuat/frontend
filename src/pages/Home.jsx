@@ -8,7 +8,7 @@ export default function Home(){
     let navigate = useNavigate()
 
     function handleClick() {
-        navigate("/log");
+        navigate("/children");
     }
 
     return (

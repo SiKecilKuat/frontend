@@ -79,7 +79,6 @@ export default function AllChild(){
     return (
         <div>
             <NavTop title="Semua Anak"/>
-
             
             {children.map((child, index) => (
             

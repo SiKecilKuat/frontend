@@ -5,10 +5,6 @@ export default function CardLog({date,logs}){
     
     const [status,setStatus] = useState(false)
 
-       console.log(formatDateStringWithoutTime(logs[0].dtcreated))
-       console.log(date)
- 
-       
     function formatDateStringWithoutTime(dateString) {
         const dateWithoutTime = new Date(dateString);
         dateWithoutTime.setHours(0, 0, 0, 0); // Set time to midnight
@@ -56,9 +52,9 @@ export default function CardLog({date,logs}){
                 {
                  
                     logs.map((log,index) => {
-                        if(formatDateStringWithoutTime(log.dtcreated) == date){
+                        // if(formatDateStringWithoutTime(log.dtcreated) === date){
                             return <DailyLog key={index} mode="eat" title={log.food_item}/>
-                        }
+                        // }
                     })
                 }
             </div>
